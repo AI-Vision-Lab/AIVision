@@ -1,0 +1,60 @@
+Inhomogeneous Image Segmentation using Hybrid Active Contours Model with Application to Breast Tumor Detection
+IEEE Access
+2020
+3.745
+
+Transportation Object Detection with Bag of Visual Words Model by PLSA and MLP
+Song, H.C., Choi, K.N.
+Mobile Networks and Applications
+2018
+2.390
+
+Adaptive active contours based on variable kernel with constant initialisation 
+Munir, A.,Soomro, S., Lee, C.H., Choi, K.N.
+IET Image Processing
+2018
+2.004
+
+
+Visual Distinctiveness Detection of Pedestrian based on Statistically Weighting PLSA for Intelligent Systems
+Song,H.C., Lee,G.H., Shim,D.-S., Choi, K.N.
+International Journal of Control Automation and System
+2018
+2.181
+
+Modifying and evaluating efficacy of interactive computerized program using motion tracking technology to improve unilateral neglect in patients with chronic stroke
+Kang,S.H., Kim, D.K., Seo,K.M., Choi,K.N. 
+Medicine
+2018
+1.870
+
+Image denoising feedback framework using split Bregman approach
+Kim,J.H., Akram,F., Choi, K.N.
+Expert Systems with Applications 
+2017
+3.768
+
+
+Real-Time Head Pose Estimation Framework for Mobile Devices
+Kim, J., Lee, G.H., Jung, J.J., Choi, K.N.
+Mobile Networks and Applications
+2017
+2.497
+
+Segmentation of Left and Right Ventricles in Cardiac MRI Using ActiveContours
+Soomro,S., Akram, F., Munir, A., Lee, C.H., Choi, K.N. 
+Computational and mathematical methods in medicine
+2017
+1.545
+
+
+
+
+
+
+
+
+
+
+
+
