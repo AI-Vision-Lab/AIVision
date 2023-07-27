@@ -38,6 +38,30 @@
 
         th {
             border-bottom: 100px solid white;
+            font-size: x-large;
+            
+        }
+        
+        /* Temporary Table Header Style */
+        th:before,
+        th:after {
+            background-color: #000;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 40%;
+        }
+
+        th:before {
+            right: 2em;
+            margin-left: -100%;
+        }
+
+        th:after {
+            left: 2em;
+            margin-right: -100%;
         }
 
         b {
@@ -195,7 +219,7 @@
                 
                 <table class="text-center" align="text-center">
                 <!--Table for Professor-->
-                <tr bgcolor="#A9A9A9">
+                <tr>
                     <th colspan="7">Professor</th>
                 </tr>
                
@@ -240,7 +264,7 @@
                 </tr>
 
                 <!--Table for Current Members-->
-                <tr bgcolor="#A9A9A9">
+                <tr>
                     <th colspan="7">Current Members</th>
                     <th></th>
                 </tr>
@@ -271,7 +295,7 @@
                         <b>Ehtesham Iqbal Cheema</b><br>
                         Ph.D Candidate<br><br>
                         Research Interest : Computer Vision, Software Applications, Image Analysis, Object Detection<br>
-                        <br><br>
+                        <br>
                     </td>   
                 </tr>
                 
@@ -324,7 +348,7 @@
                
                 <tr>
                     <td>
-                        <!--img src="members/.jpg" width="110" height="150"-->
+                        <img src="members/js.jpg" width="110" height="150">
                     </td> 
                     <td>
                     &nbsp;&nbsp;
@@ -362,14 +386,14 @@
                      <td style="text-align:left">
                          <b>Chae Lynn Kim</b><br>
                          Undergraduate Student<br><br>
-                         Majoring in: Library & Information Science, Software<br>
+                         Majoring in : Library & Information Science(중앙대 문헌정보학과 4학년), Software<br>
                          <br><br>
                      </td>
                  </tr>
                                   
                 <!--Table for Graduate Members-->
                 
-                <tr bgcolor="#A9A9A9">
+                <tr>
                     <th colspan="7">Alumni in abroad</th>
                 </tr>
                
