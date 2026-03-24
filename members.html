@@ -49,13 +49,12 @@
         }
 
         body::before {
-            content: '';
-            position: fixed; inset: 0;
+            content: ''; position: fixed; inset: 0;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
             pointer-events: none; z-index: 0;
         }
 
-        /* ── HEADER ── */
+        /* ══ HEADER ══ */
         header {
             position: sticky; top: 0; z-index: 1000;
             background: rgba(247,245,240,0.95);
@@ -72,9 +71,8 @@
         .logo-group img { height: 36px; }
         .header-right { display: flex; align-items: center; gap: 22px; }
         .header-email {
-            font-family: var(--font-mono); font-size: 12.5px;
-            color: var(--text-muted); text-decoration: none;
-            display: flex; align-items: center; gap: 7px; transition: color .2s;
+            font-family: var(--font-mono); font-size: 12.5px; color: var(--text-muted);
+            text-decoration: none; display: flex; align-items: center; gap: 7px; transition: color .2s;
         }
         .header-email:hover { color: var(--accent); }
         .header-email i { color: var(--accent); }
@@ -97,11 +95,10 @@
         .nav-bar a:hover { color: var(--text-dark); background: var(--bg-soft); }
         .nav-bar a.active { color: var(--accent); background: var(--accent-light); }
 
-        /* ── HERO ── */
+        /* ══ HERO ══ */
         .page-hero {
             position: relative; overflow: hidden;
-            background: var(--bg-white);
-            border-bottom: 1px solid var(--border);
+            background: var(--bg-white); border-bottom: 1px solid var(--border);
             padding: 72px 36px 64px; text-align: center;
         }
         .page-hero::before {
@@ -113,75 +110,59 @@
             mask-image: radial-gradient(ellipse 70% 90% at 50% 50%, black 30%, transparent 100%);
         }
         .hero-label {
-            font-family: var(--font-mono); font-size: 11.5px;
-            letter-spacing: .2em; text-transform: uppercase;
-            color: var(--accent); margin-bottom: 14px; position: relative; z-index: 1;
+            font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .2em;
+            text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+            position: relative; z-index: 1;
         }
         .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(40px, 6vw, 64px);
-            color: var(--text-dark); line-height: 1.08;
-            position: relative; z-index: 1;
+            font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px);
+            color: var(--text-dark); line-height: 1.08; position: relative; z-index: 1;
         }
         .hero-title em { font-style: italic; color: var(--accent); }
         .hero-sub {
             margin-top: 14px; color: var(--text-muted); font-size: 15.5px;
-            position: relative; z-index: 1;
-            max-width: 540px; margin-inline: auto;
+            position: relative; z-index: 1; max-width: 540px; margin-inline: auto;
         }
         .hero-divider {
             width: 56px; height: 3px; background: var(--accent);
-            margin: 24px auto 0; border-radius: 2px;
-            position: relative; z-index: 1;
+            margin: 24px auto 0; border-radius: 2px; position: relative; z-index: 1;
         }
 
-        /* ── SECTION SHELL ── */
-        .section {
-            max-width: 1200px; margin: 0 auto;
-            padding: 64px 36px 0;
-        }
+        /* ══ SECTION WRAPPER ══ */
+        .section { max-width: 1200px; margin: 0 auto; padding: 64px 36px 0; }
         .section:last-of-type { padding-bottom: 80px; }
-        .section-header {
-            display: flex; align-items: center; gap: 16px; margin-bottom: 40px;
-        }
+        .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
         .section-header h2 {
             font-family: var(--font-display); font-size: 26px;
             color: var(--text-dark); white-space: nowrap;
         }
         .section-line { flex: 1; height: 1px; background: var(--border); }
         .section-count {
-            font-family: var(--font-mono); font-size: 11px;
-            color: var(--accent); background: var(--accent-light);
-            border: 1px solid rgba(26,86,196,.18);
+            font-family: var(--font-mono); font-size: 11px; color: var(--accent);
+            background: var(--accent-light); border: 1px solid rgba(26,86,196,.18);
             padding: 3px 12px; border-radius: 100px; white-space: nowrap;
         }
 
-        /* ── PROFESSOR ── */
+        /* ══ PROFESSOR ══ */
         .professor-card {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: 20px; box-shadow: var(--shadow-md);
             padding: 44px 48px;
-            display: grid; grid-template-columns: auto 1fr;
-            gap: 44px; position: relative; overflow: hidden;
+            display: grid; grid-template-columns: auto 1fr; gap: 44px;
+            position: relative; overflow: hidden;
             transition: box-shadow .3s, border-color .3s;
             animation: fadeUp .55s ease both;
         }
-        .professor-card:hover {
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(26,86,196,.25);
-        }
+        .professor-card:hover { box-shadow: var(--shadow-lg); border-color: rgba(26,86,196,.25); }
         .professor-card::after {
-            content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 4px;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
             background: linear-gradient(90deg, var(--accent), #5b8dee);
             border-radius: 20px 20px 0 0;
         }
         .prof-photo img {
             width: 136px; height: 178px; object-fit: cover;
-            border-radius: 12px; display: block;
-            box-shadow: var(--shadow-md);
-            border: 3px solid var(--bg-white);
-            outline: 1px solid var(--border);
+            border-radius: 12px; display: block; box-shadow: var(--shadow-md);
+            border: 3px solid var(--bg-white); outline: 1px solid var(--border);
         }
         .prof-info { padding-top: 4px; }
         .prof-info h3 {
@@ -189,25 +170,23 @@
             color: var(--text-dark); line-height: 1.15; margin-bottom: 6px;
         }
         .prof-role {
-            font-family: var(--font-mono); font-size: 12px;
-            letter-spacing: .08em; text-transform: uppercase;
-            color: var(--accent); margin-bottom: 18px;
+            font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em;
+            text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
         }
         .prof-meta { font-size: 13.5px; color: var(--text-muted); line-height: 2; }
         .prof-meta a { color: var(--accent); text-decoration: none; }
         .prof-meta a:hover { text-decoration: underline; }
         .prof-bio {
-            margin-top: 22px; padding-top: 20px;
-            border-top: 1px solid var(--border);
+            margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--border);
             color: var(--text-body); font-size: 14px; line-height: 1.85;
         }
 
-        /* ══════════════════════════════════════════
-           MEMBER CARDS — vertical layout
-        ══════════════════════════════════════════ */
+        /* ══════════════════════════════════════
+           MEMBER CARDS — clean portrait cards
+        ══════════════════════════════════════ */
         .members-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
             gap: 24px;
         }
 
@@ -221,98 +200,93 @@
             flex-direction: column;
             transition: box-shadow .3s, border-color .3s, transform .3s;
             animation: fadeUp .5s ease both;
-            position: relative;
         }
-
         .member-card:hover {
             box-shadow: var(--shadow-md);
-            border-color: rgba(26,86,196,.3);
+            border-color: rgba(26,86,196,.28);
             transform: translateY(-5px);
         }
+        .member-card.ms:hover { border-color: rgba(181,134,13,.35); }
 
-        /* colored top bar per degree type */
-        .member-card::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0;
-            height: 3px;
-            border-radius: var(--radius) var(--radius) 0 0;
-        }
-        .member-card.phd::before  { background: linear-gradient(90deg, var(--accent), #5b8dee); }
-        .member-card.ms::before   { background: linear-gradient(90deg, var(--accent-gold), #e6c453); }
-
-        /* photo banner */
-        .member-photo-top {
-            width: 100%;
-            height: 190px;
+        /* ── Photo area: soft background, centred portrait ── */
+        .member-photo-wrap {
             background: var(--bg-soft);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            padding: 24px 20px 16px;
             border-bottom: 1px solid var(--border);
             position: relative;
         }
 
-        .member-photo-top img {
-            width: 100%; height: 100%;
+        .member-photo-wrap img {
+            width: 110px;
+            height: 140px;
             object-fit: cover;
-            object-position: top center;
-            transition: transform .4s ease;
+            object-position: center 10%;   /* show face not forehead */
+            border-radius: 10px;
             display: block;
+            border: 3px solid var(--bg-white);
+            box-shadow: 0 4px 16px rgba(0,0,0,.12);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .member-card:hover .member-photo-wrap img {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,.16);
         }
 
-        .member-card:hover .member-photo-top img {
-            transform: scale(1.04);
-        }
-
-        /* placeholder icon when no photo */
-        .member-photo-top .no-photo {
-            width: 80px; height: 80px;
-            border-radius: 50%;
+        /* placeholder when no photo */
+        .member-photo-wrap .no-photo {
+            width: 110px; height: 140px;
+            border-radius: 10px;
             background: var(--accent-light);
-            border: 2px solid rgba(26,86,196,.15);
+            border: 3px solid var(--bg-white);
+            box-shadow: 0 4px 16px rgba(0,0,0,.08);
             display: flex; align-items: center; justify-content: center;
-            color: var(--accent); font-size: 30px;
+            color: var(--accent); font-size: 36px;
         }
 
-        /* overlay badge on photo */
-        .photo-badge {
-            position: absolute; bottom: 10px; left: 12px;
-            font-family: var(--font-mono); font-size: 10px;
-            letter-spacing: .06em; padding: 3px 10px;
-            border-radius: 100px; backdrop-filter: blur(6px);
+        /* degree badge below photo */
+        .degree-badge {
+            margin-top: 12px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: .07em;
+            padding: 4px 13px;
+            border-radius: 100px;
         }
-        .photo-badge.phd {
-            background: rgba(26,86,196,.85);
-            color: #fff;
+        .degree-badge.phd {
+            background: var(--accent-light);
+            border: 1px solid rgba(26,86,196,.22);
+            color: var(--accent);
         }
-        .photo-badge.ms {
-            background: rgba(181,134,13,.88);
-            color: #fff;
+        .degree-badge.ms {
+            background: var(--accent-gold-bg);
+            border: 1px solid rgba(181,134,13,.28);
+            color: var(--accent-gold);
         }
 
-        /* card body */
+        /* top border stripe colour-coded */
+        .member-card.phd { border-top: 3px solid var(--accent); }
+        .member-card.ms  { border-top: 3px solid var(--accent-gold); }
+
+        /* ── Card body ── */
         .member-body {
-            padding: 18px 18px 20px;
+            padding: 16px 18px 20px;
             display: flex; flex-direction: column; flex: 1;
         }
 
         .member-body h4 {
-            font-weight: 600; font-size: 15.5px;
-            color: var(--text-dark);
-            line-height: 1.3; margin-bottom: 12px;
+            font-weight: 600; font-size: 15px;
+            color: var(--text-dark); line-height: 1.3; margin-bottom: 10px;
         }
 
-        /* highlight strip */
         .member-highlight {
-            font-size: 11.5px;
-            color: var(--accent);
+            font-size: 11.5px; color: var(--accent);
             background: var(--accent-light);
             border-left: 3px solid var(--accent);
-            padding: 6px 10px;
-            border-radius: 0 6px 6px 0;
-            margin-bottom: 12px;
-            line-height: 1.55;
+            padding: 6px 10px; border-radius: 0 6px 6px 0;
+            margin-bottom: 12px; line-height: 1.55;
         }
         .member-highlight a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
@@ -323,43 +297,32 @@
         }
 
         .interest-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-
         .tag {
             font-size: 11px; padding: 3px 9px;
             border-radius: 100px;
-            background: var(--bg-soft);
-            border: 1px solid var(--border);
+            background: var(--bg-soft); border: 1px solid var(--border);
             color: var(--text-muted);
             transition: background .2s, border-color .2s, color .2s;
         }
-        .member-card:hover .tag {
-            background: var(--accent-light);
-            border-color: rgba(26,86,196,.2);
-            color: var(--accent);
+        .member-card.phd:hover .tag {
+            background: var(--accent-light); border-color: rgba(26,86,196,.2); color: var(--accent);
         }
         .member-card.ms:hover .tag {
-            background: var(--accent-gold-bg);
-            border-color: rgba(181,134,13,.22);
-            color: var(--accent-gold);
+            background: var(--accent-gold-bg); border-color: rgba(181,134,13,.22); color: var(--accent-gold);
         }
 
-        /* ── ALUMNI ── */
+        /* ══ ALUMNI ══ */
         .alumni-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
-            gap: 14px;
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 14px;
         }
         .alumni-card {
             background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: 12px; padding: 20px 22px;
-            box-shadow: var(--shadow-sm);
+            border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow-sm);
             transition: box-shadow .25s, border-color .25s, transform .25s;
             animation: fadeUp .45s ease both;
         }
         .alumni-card:hover {
-            box-shadow: var(--shadow-md);
-            border-color: rgba(26,86,196,.25);
-            transform: translateY(-2px);
+            box-shadow: var(--shadow-md); border-color: rgba(26,86,196,.25); transform: translateY(-2px);
         }
         .alumni-name { font-weight: 600; font-size: 15px; color: var(--text-dark); margin-bottom: 3px; }
         .alumni-degree {
@@ -369,7 +332,7 @@
         .alumni-current { font-size: 12.5px; color: var(--accent); font-weight: 500; margin-bottom: 6px; line-height: 1.5; }
         .alumni-interests-text { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
 
-        /* ── FOOTER CTA ── */
+        /* ══ FOOTER CTA ══ */
         .footer-cta {
             background: var(--accent); padding: 56px 36px;
             text-align: center; position: relative; overflow: hidden;
@@ -382,15 +345,13 @@
         }
         .footer-cta h3 {
             font-family: var(--font-display); font-style: italic;
-            font-size: clamp(22px, 4vw, 36px); color: #fff;
-            position: relative; z-index: 1;
+            font-size: clamp(22px, 4vw, 36px); color: #fff; position: relative; z-index: 1;
         }
 
-        /* ── FOOTER ── */
+        /* ══ FOOTER ══ */
         footer { background: var(--text-dark); color: #d1d5db; }
         .footer-main {
-            max-width: 1200px; margin: 0 auto;
-            padding: 52px 36px 36px;
+            max-width: 1200px; margin: 0 auto; padding: 52px 36px 36px;
             display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
         }
         .footer-logo img { height: 34px; filter: brightness(0) invert(1); opacity: .75; }
@@ -407,7 +368,7 @@
         .footer-bottom a { color: #6b7280; text-decoration: none; }
         .footer-bottom a:hover { color: #fff; }
 
-        /* ── ANIMATIONS ── */
+        /* ══ ANIMATIONS ══ */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -431,11 +392,9 @@
         .alumni-card:nth-child(11) { animation-delay: .33s; }
         .alumni-card:nth-child(12) { animation-delay: .36s; }
 
-        /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             .professor-card { grid-template-columns: 1fr; padding: 32px; }
             .footer-main { grid-template-columns: 1fr 1fr; }
-            .members-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
         }
         @media (max-width: 600px) {
             .header-inner { flex-direction: column; align-items: flex-start; }
@@ -516,40 +475,18 @@
     <div class="section-header">
         <h2>Current Members</h2>
         <div class="section-line"></div>
-        <span class="section-count">6 researchers</span>
+        <span class="section-count">5 researchers</span>
     </div>
 
     <div class="members-grid">
 
-        <!-- Asim Niaz -->
-        <div class="member-card phd">
-            <div class="member-photo-top">
-                <img src="members/asim.png" alt="Asim Niaz">
-                <span class="photo-badge phd">Ph.D. Student</span>
-            </div>
-            <div class="member-body">
-                <h4>Asim Niaz</h4>
-                <div class="member-highlight">
-                    <a href="https://disco.ethz.ch/members/wroger/ranking.php" target="_blank">
-                        <i class="fa fa-flask" style="font-size:10px;margin-right:4px;"></i>INRIA France (World #6)
-                    </a><br>
-                    ERICSSON, Montreal, Canada
-                </div>
-                <p class="interests-label">Research Interests</p>
-                <div class="interest-tags">
-                    <span class="tag">Medical Imaging</span>
-                    <span class="tag">3D Segmentation</span>
-                    <span class="tag">Anomaly Detection</span>
-                    <span class="tag">LVLM</span>
-                </div>
-            </div>
-        </div>
+ 
 
         <!-- Jin Kim -->
         <div class="member-card phd">
-            <div class="member-photo-top">
+            <div class="member-photo-wrap">
                 <img src="members/jkim.jpg" alt="Jin Kim">
-                <span class="photo-badge phd">Ph.D. Student</span>
+                <span class="degree-badge phd">Ph.D. Student</span>
             </div>
             <div class="member-body">
                 <h4>Jin Kim</h4>
@@ -563,9 +500,9 @@
 
         <!-- Muhammad Umraiz -->
         <div class="member-card phd">
-            <div class="member-photo-top">
+            <div class="member-photo-wrap">
                 <img src="members/Umraiz.png" alt="Muhammad Umraiz">
-                <span class="photo-badge phd">Ph.D. Student</span>
+                <span class="degree-badge phd">Ph.D. Student</span>
             </div>
             <div class="member-body">
                 <h4>Muhammad Umraiz</h4>
@@ -584,9 +521,9 @@
 
         <!-- Muhammad Sibtain Abbas -->
         <div class="member-card phd">
-            <div class="member-photo-top">
+            <div class="member-photo-wrap">
                 <img src="members/ms.png" alt="Muhammad Sibtain Abbas">
-                <span class="photo-badge phd">Ph.D. Student</span>
+                <span class="degree-badge phd">Ph.D. Student</span>
             </div>
             <div class="member-body">
                 <h4>Muhammad Sibtain Abbas</h4>
@@ -601,9 +538,9 @@
 
         <!-- Sidra Ahsan -->
         <div class="member-card ms">
-            <div class="member-photo-top">
+            <div class="member-photo-wrap">
                 <img src="members/female_icon.png" alt="Sidra Ahsan">
-                <span class="photo-badge ms">M.S. Student</span>
+                <span class="degree-badge ms">M.S. Student</span>
             </div>
             <div class="member-body">
                 <h4>Sidra Ahsan</h4>
@@ -616,9 +553,9 @@
 
         <!-- Jae Sung Joo -->
         <div class="member-card ms">
-            <div class="member-photo-top">
+            <div class="member-photo-wrap">
                 <img src="members/jsjoo.jpg" alt="Jae Sung Joo">
-                <span class="photo-badge ms">M.S. Student</span>
+                <span class="degree-badge ms">M.S. Student</span>
             </div>
             <div class="member-body">
                 <h4>Jae Sung Joo</h4>
@@ -638,9 +575,18 @@
     <div class="section-header">
         <h2>Alumni &amp; In Abroad</h2>
         <div class="section-line"></div>
-        <span class="section-count">17 graduates</span>
+        <span class="section-count">18 graduates</span>
     </div>
     <div class="alumni-grid">
+
+    
+        <div class="alumni-card">
+            <div class="alumni-name">Asim Niaz</div>
+            <div class="alumni-degree">Graduate · Ph.D.</div>
+            <div class="alumni-current">INRIA France (World #6 Lab), ERICSSON, Montreal, Canada</div>
+            <div class="alumni-interests-text">Medical Imaging, 3D Segmentation, Anomaly Detection, LVLM</div>
+        </div>
+
         <div class="alumni-card">
             <div class="alumni-name">Shafiullah Soomro</div>
             <div class="alumni-degree">Graduate · Ph.D.</div>
